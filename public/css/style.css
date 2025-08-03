@@ -1,0 +1,75 @@
+/* Tailwind Safelist: bg-gray-500 bg-red-500 bg-yellow-500 bg-green-500 bg-blue-500 bg-indigo-500 bg-purple-500 bg-pink-500 */
+body { 
+    font-family: 'Inter', sans-serif; 
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+}
+.font-title { font-family: 'MedievalSharp', cursive; }
+.area-container { min-height: 300px; }
+.enemy-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.enemy-card:hover {
+    transform: scale(1.02);
+    z-index: 10;
+}
+.enemy-card:active {
+    transform: scale(0.98);
+}
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: #334155; border-radius: 10px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #64748b; border-radius: 10px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+.hp-bar-foreground { background-color: #ef4444; transition: width 0.2s ease-in-out; }
+.mp-bar-foreground { background-color: #3b82f6; transition: width 0.2s ease-in-out; }
+.stamina-bar-foreground { background-color: #f59e0b; transition: width 0.2s ease-in-out; }
+.xp-bar-foreground { background-color: #8b5cf6; transition: width 0.2s ease-in-out; }
+.brick-bar-foreground { background-color: #f59e0b; transition: width 0.2s ease-in-out; }
+.construction-bar-foreground { background-color: #3b82f6; transition: width 0.2s ease-in-out; }
+.tab-button.active { background-color: #eab308; color: #1e293b; }
+.chat-channel-button.active { background-color: #eab308; color: #1e293b; }
+#connection-status.disconnected { background-color: #ef4444; }
+#connection-status.connected { background-color: #22c55e; }
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .enemy-card {
+        min-height: 80px;
+    }
+    .enemy-card:hover {
+        transform: none;
+    }
+    .enemy-card:active {
+        transform: scale(0.95);
+    }
+    .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+}
+
+/* Prevent text selection on mobile */
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Allow text selection in inputs */
+input, textarea {
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
